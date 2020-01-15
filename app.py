@@ -60,6 +60,23 @@ def add_product():
 
     return product_schema.jsonify(new_product)
 
+# print
+@app.route("/print", methods=["GET"])
+def print_test():
+    return ("PRINTANDO UAU BLABLA <br> BLA <br> all your base are belong to us")
+
+# Get all products
+@app.route("/count", methods=["GET"])
+def get_count():
+    all_products = Product.query.all()
+    result = products_schema.dump(all_products)
+    array_json = jsonify(result)
+    array_json = result
+    result = 0
+    for i in array_json:
+        result += 1
+    return str(result)
+
 # Get all products
 @app.route("/product", methods=["GET"])
 def get_products():
