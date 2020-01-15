@@ -63,7 +63,7 @@ def add_product():
 # print
 @app.route("/print", methods=["GET"])
 def print_test():
-    return ("PRINTANDO UAU BLABLA <br> BLA <br> all your base are belong to us")
+    return ("PRINTANDO UAU BLABLA <br> BLA <br> all your base are belong to us <br> Wise Choice <br> SLAP LIKE NOW <br> O M G <br> ")
 
 # Get all products
 @app.route("/count", methods=["GET"])
